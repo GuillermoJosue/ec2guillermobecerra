@@ -1,4 +1,4 @@
-@subdominio = sub-dominio-render
+@subdominio = https://ec2guillermobecerra.onrender.com/
 
 ##############################
 # Requests SIN base de datos #
@@ -6,15 +6,15 @@
 
 ###
 # 1: Mostrar su código IDAT y su nombre en el siguiente formato: CÓDIGO - NOMBRE
-GET https://{{subdominio}}.onrender.com/
+GET https://ec2guillermobecerra.onrender.com/
 
 ###
 # 2: Mostrar su código IDAT
-GET https://{{subdominio}}.onrender.com/idat/codigo
+GET https://ec2guillermobecerra.onrender.com/idat/codigo
 
 ###
 # 3: Mostrar su nombre completo
-GET https://{{subdominio}}.onrender.com/idat/nombre-completo
+GET https://ec2guillermobecerra.onrender.com/idat/nombre-completo
 
 
 
