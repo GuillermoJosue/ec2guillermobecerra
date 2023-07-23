@@ -1,6 +1,7 @@
 
 #@server = http://localhost:8080
-@server = https://ec2guillermobecerra.onrender.com
+#@server = https://ec2guillermobecerra.onrender.com
+@server = https://servicio-web-idat-gb.onrender.com
 ###
 
 ##a la Raiz
@@ -24,7 +25,7 @@ GET {{server}}/cursos?size=2&page=1&sort=creditos,desc
 ###
 
 #para VER POR CODIGO
-GET {{server}}/cursos/152
+GET {{server}}/cursos/5
 ###
 
 #para GUARDAR
@@ -32,8 +33,9 @@ POST {{server}}/cursos
 Content-Type: application/json
 
 {
-    "nombre": "Compiladores",
-    "creditos": 5
+    "nombre": "MATEMATICA 2",
+    "creditos": 4,
+    "id_carrera": 1
 }
 ###
 
@@ -65,3 +67,38 @@ GET {{server}}/profile
 GET {{server}}/profile/cursos
 ###
 
+#AL PROFILE CARRERAS - Saber Metodos
+GET {{server}}/profile/carreras
+###
+
+##########################
+####CARRERAS##############
+##########################
+
+#para VER CARRERA POR CODIGO DE CURSO
+GET {{server}}/cursos/252/carrera
+###
+
+#para VER CURSOS POR CODIGO CARRERA
+GET {{server}}/carreras/2/cursos
+###
+
+#Listar Carreras
+GET {{server}}/carreras
+###
+GET {{server}}/carreras/1
+###
+
+#Agregar Carrera
+POST {{server}}/carreras
+Content-Type: application/json
+
+{"nombre": "Administracion"}
+
+### 
+
+### 
+PATCH {{server}}/cursos/5
+Content-Type: application/json
+
+{"id_carrera": 1}
