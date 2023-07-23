@@ -33,9 +33,9 @@ POST {{server}}/cursos
 Content-Type: application/json
 
 {
-    "nombre": "MATEMATICA 2",
+    "nombre": "MATEMATICA 7",
     "creditos": 4,
-    "id_carrera": 1
+    "carrera": "https://servicio-web-idat-gb.onrender.com/carrera/52"
 }
 ###
 
@@ -76,7 +76,7 @@ GET {{server}}/profile/carreras
 ##########################
 
 #para VER CARRERA POR CODIGO DE CURSO
-GET {{server}}/cursos/252/carrera
+GET {{server}}/cursos/202/carrera
 ###
 
 #para VER CURSOS POR CODIGO CARRERA
@@ -98,7 +98,7 @@ Content-Type: application/json
 ### 
 
 ### 
-PATCH {{server}}/cursos/5
+PATCH {{server}}/cursos/354
 Content-Type: application/json
 
-{"id_carrera": 1}
+{"carrera": "https://servicio-web-idat-gb.onrender.com/carrera/52"}
