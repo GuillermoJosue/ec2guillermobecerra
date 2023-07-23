@@ -5,7 +5,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity // This tells Hibernate to make a table out of this class
+//import añadidos
+import jakarta.persistence.Table;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.CascadeType;
+
+@Entity
+@Table(name = "curso")
 public class Curso {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
@@ -14,6 +21,24 @@ public class Curso {
   private String nombre;
 
   private int creditos;
+
+  //vinculando carrera
+
+  @ManyToOne(cascade=CascadeType.ALL)
+  @JoinColumn(name = "id_carrera")
+  private Carrera carrera;
+
+  public Carrera getCarrera() {
+      return carrera;
+  }
+
+  public void setCarrera(Carrera carrera) {
+      this.carrera = carrera;
+  }
+
+  //fin de vinculacion
+
+
 
   public Integer getId() {
     return id;
