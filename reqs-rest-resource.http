@@ -3,7 +3,7 @@
 @server = https://ec2guillermobecerra.onrender.com
 ###
 
-#a la Raiz
+##a la Raiz
 GET {{server}}
 ###
 
