@@ -97,8 +97,9 @@ Content-Type: application/json
 
 ### 
 
-### 
+#Editar Carrera de un Curso
 PATCH {{server}}/cursos/354
 Content-Type: application/json
 
 {"carrera": "https://servicio-web-idat-gb.onrender.com/carrera/52"}
+### 
