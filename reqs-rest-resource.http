@@ -1,0 +1,66 @@
+
+@server = http://localhost:8080
+###
+
+#a la Raiz
+GET {{server}}
+###
+
+#para VER LISTADO CURSOS
+GET {{server}}/cursos
+###
+
+#para ver el contenido FILTRADO POR SIZE Y PAGE
+GET {{server}}/cursos?size=2&page=1
+###
+
+#para ver el contenido FILTRADO POR CREDITOS DESCENDENTE
+GET {{server}}/cursos?sort=creditos,desc
+###
+
+#para ver el contenido FILTRADO POR SIZE, PAGE, SORT, DESCE
+GET {{server}}/cursos?size=2&page=1&sort=creditos,desc
+###
+
+#para VER POR CODIGO
+GET {{server}}/cursos/152
+###
+
+#para GUARDAR
+POST {{server}}/cursos
+Content-Type: application/json
+
+{
+    "nombre": "Compiladores",
+    "creditos": 5
+}
+###
+
+#para EDITAR UN CAMPO o ALGUNOS - PATCH
+#OBS PARA EDITAR TODOS LOS CAMPOS SE USA PUT
+PATCH {{server}}/cursos/152
+Content-Type: application/json
+
+{
+    "nombre": "Compiladores",
+    "creditos": 5
+}
+###
+
+#PARA ELIMINAR
+DELETE {{server}}/cursos/153
+###
+
+
+#Para Buscar por Nombre FINDBYNOMBRE
+GET {{server}}/cursos/search/findByNombre?nombre=Compiladores
+###
+
+#AL PROFILE - saber URL Cursos
+GET {{server}}/profile
+###
+
+#AL PROFILE CURSOS - Saber Metodos
+GET {{server}}/profile/cursos
+###
+

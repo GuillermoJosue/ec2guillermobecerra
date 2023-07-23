@@ -1,9 +1,13 @@
 @subdominio = https://ec2guillermobecerra.onrender.com/
-@subdominio = ec2guillermobecerra
+#@subdominio = ec2guillermobecerra
 
 ##############################
 # Requests SIN base de datos #
 ##############################
+
+###
+# Prueba
+GET {{subdominio}}
 
 ###
 # 1: Mostrar su código IDAT y su nombre en el siguiente formato: CÓDIGO - NOMBRE
