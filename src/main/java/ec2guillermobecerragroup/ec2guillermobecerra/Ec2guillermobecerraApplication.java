@@ -10,4 +10,5 @@ public class Ec2guillermobecerraApplication {
 		SpringApplication.run(Ec2guillermobecerraApplication.class, args);
 	}
 
+	
 }
